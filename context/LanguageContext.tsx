@@ -10,10 +10,25 @@ import {
   type ReactNode,
 } from "react";
 import en from "@/locales/en.json";
+import bn from "@/locales/bn.json";
+import gu from "@/locales/gu.json";
 import hi from "@/locales/hi.json";
+import mr from "@/locales/mr.json";
+import pa from "@/locales/pa.json";
 import es from "@/locales/es.json";
+import ta from "@/locales/ta.json";
+import te from "@/locales/te.json";
 
-export type LanguageCode = "en" | "hi" | "es";
+export type LanguageCode =
+  | "en"
+  | "bn"
+  | "gu"
+  | "hi"
+  | "mr"
+  | "pa"
+  | "es"
+  | "ta"
+  | "te"
 
 export interface LanguageOption {
   code: LanguageCode;
@@ -28,14 +43,26 @@ export interface LanguageOption {
 // 4) adding an entry to this list.
 export const languages: LanguageOption[] = [
   { code: "en", label: "English", nativeLabel: "English" },
+  { code: "bn", label: "Bengali", nativeLabel: "বাংলা" },
+  { code: "gu", label: "Gujarati", nativeLabel: "ગુજરાતી" },
   { code: "hi", label: "Hindi", nativeLabel: "हिन्दी" },
+  { code: "mr", label: "Marathi", nativeLabel: "मराठी" },
+  { code: "pa", label: "Punjabi", nativeLabel: "ਪੰਜਾਬੀ" },
   { code: "es", label: "Spanish", nativeLabel: "Español" },
+  { code: "ta", label: "Tamil", nativeLabel: "தமிழ்" },
+  { code: "te", label: "Telugu", nativeLabel: "తెలుగు" },
 ];
 
 const dictionaries: Record<LanguageCode, Record<string, unknown>> = {
   en,
+  bn,
+  gu,
   hi,
+  mr,
+  pa,
   es,
+  ta,
+  te,
 };
 
 const STORAGE_KEY = "mansi-plastic-language";
