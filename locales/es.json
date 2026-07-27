@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "title": "Mansi Plastic | Fabricante y proveedor de productos de embalaje plástico",
+    "description": "Mansi Plastic es un fabricante y proveedor de confianza de una amplia gama de productos de embalaje plástico, que combina décadas de experiencia con un compromiso con la calidad, la innovación y la fiabilidad."
+  },
+  "nav": {
+    "home": "Inicio",
+    "about": "Nosotros",
+    "products": "Productos",
+    "careers": "Empleo",
+    "gallery": "Galería",
+    "contact": "Contacto"
+  },
+  "header": {
+    "languageLabel": "Idioma",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "ariaLabel": "Productos destacados",
+    "previousSlide": "Diapositiva anterior",
+    "nextSlide": "Siguiente diapositiva",
+    "goToSlide": "Ir a la diapositiva {n}",
+    "slides": [
+      {
+        "heading": "Película plana de LDPE",
+        "description": "Una solución de embalaje versátil y duradera, diseñada para una amplia gama de aplicaciones industriales y comerciales.",
+        "cta": "Ver más"
+      },
+      {
+        "heading": "Película termorretráctil",
+        "description": "Película termorretráctil de alta claridad para agrupación y paletizado, diseñada para resistencia, estabilidad de carga y rendimiento constante.",
+        "cta": "Ver más"
+      },
+      {
+        "heading": "Fabricación de precisión",
+        "description": "Líneas de extrusión modernas y un riguroso control de calidad, para un embalaje plástico en el que siempre se puede confiar.",
+        "cta": "Ver más"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Desde 1982",
+    "heading": "Nosotros",
+    "body": "Mansi Plastic se fundó con un propósito claro: fabricar una amplia gama de productos de embalaje plástico en los que las empresas puedan confiar. A lo largo de las décadas, nuestra oferta ha crecido para incluir película termorretráctil de LDPE, película termorretráctil impresa, película termorretráctil para agrupación, película tubular termorretráctil de LDPE, película estirable de LLDPE en calidad manual y para máquina, película termorretráctil microperforada, cubiertas superiores para pallets, y forros y bolsas para la industria farmacéutica. Con décadas de experiencia y un compromiso con la innovación, la sostenibilidad y el rendimiento, nos hemos consolidado como un socio de embalaje de confianza para empresas de diversos sectores.",
+    "imageAlt": "Instalación de fabricación de Mansi Plastic",
+    "highlights": [
+      "Calidad superior",
+      "Diseños innovadores",
+      "Soluciones asequibles",
+      "Socio de confianza"
+    ]
+  },
+  "productsLaunched": {
+    "heading": "Fabricante y proveedor de una amplia gama de productos de embalaje plástico",
+    "tabsAriaLabel": "Pestañas de información de productos",
+    "tabs": [
+      {
+        "label": "Productos lanzados",
+        "heading": "Productos lanzados",
+        "body": "Mansi Plastic ha lanzado una diversa gama de productos de embalaje plástico para satisfacer las diversas necesidades de la industria. Cada producto está diseñado con precisión para garantizar un rendimiento y una durabilidad óptimos. Con un enfoque en la innovación y la fiabilidad, nuestra amplia gama de productos subraya nuestro compromiso de ofrecer soluciones de embalaje versátiles y eficientes."
+      },
+      {
+        "label": "Productos a medida",
+        "heading": "Productos a medida",
+        "body": "Cada empresa tiene necesidades de embalaje diferentes. Nuestro equipo de ingeniería trabaja de cerca con los clientes para desarrollar calibres, anchos y formulaciones de película a medida, de modo que el producto final se ajuste exactamente a la aplicación."
+      },
+      {
+        "label": "Gestión de calidad",
+        "heading": "Gestión de calidad",
+        "body": "La consistencia está integrada en cada rollo que producimos. Desde la inspección de la materia prima hasta el monitoreo de espesor en línea y las pruebas de lote final, nuestro sistema de gestión de calidad garantiza que cada envío cumpla con el mismo estándar confiable."
+      }
+    ]
+  },
+  "launchedProducts": {
+    "eyebrow": "Lo que fabricamos",
+    "heading": "Productos lanzados",
+    "items": [
+      {
+        "name": "Película termorretráctil de LDPE",
+        "description": "Película de alta claridad para un agrupado seguro y a prueba de manipulaciones."
+      },
+      {
+        "name": "Película termorretráctil para agrupación",
+        "description": "Envoltura multipaquete duradera, diseñada para la línea de producción."
+      },
+      {
+        "name": "Film estirable para pallets",
+        "description": "Envoltura resistente para cargas paletizadas estables y seguras."
+      }
+    ]
+  },
+  "stats": {
+    "items": [
+      { "label": "Años de experiencia" },
+      { "label": "Equipo cualificado" },
+      { "label": "Clientes atendidos" },
+      { "label": "Objetivos alcanzados" }
+    ]
+  },
+  "ourProducts": {
+    "eyebrow": "Nuestros productos",
+    "heading": "Nuestros productos",
+    "subheading": "Nuestro compromiso con la innovación garantiza durabilidad, eficiencia y sostenibilidad en cada producto.",
+    "learnMore": "Ver más",
+    "items": [
+      {
+        "title": "Película termorretráctil de LDPE",
+        "description": "Una película de embalaje versátil y duradera, adecuada para una amplia gama de aplicaciones industriales."
+      },
+      {
+        "title": "Película termorretráctil de LDPE impresa",
+        "description": "Película termorretráctil personalizada que combina una imagen de marca sólida con protección fiable."
+      },
+      {
+        "title": "Película termorretráctil para agrupación",
+        "description": "Diseñada específicamente para agrupar multipaquetes de forma segura en líneas de alta velocidad."
+      },
+      {
+        "title": "Película tubular termorretráctil de LDPE",
+        "description": "Película tubular sin costuras diseñada para aplicaciones eficientes de retracción en pallets."
+      },
+      {
+        "title": "Película estirable de LLDPE",
+        "description": "Película estirable de calidad manual y para máquina para cargas estables y seguras."
+      },
+      {
+        "title": "Película termorretráctil microperforada",
+        "description": "Diseñada para embalaje de grado farmacéutico con ventilación controlada."
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonios",
+    "heading": "Lo que dicen nuestros clientes",
+    "showFrom": "Mostrar testimonio de {name}",
+    "items": [
+      {
+        "name": "Rajesh Malhotra",
+        "company": "Jefe de compras, Apex Pharma",
+        "feedback": "Mansi Plastic ha sido un socio de embalaje confiable durante años. La consistencia de su película y la entrega puntual facilitan nuestra planificación."
+      },
+      {
+        "name": "Sunita Rao",
+        "company": "Gerente de operaciones, Bluewave Foods",
+        "feedback": "Cambiamos a su película termorretráctil para nuestra línea de producción y de inmediato notamos menos roturas y un acabado más limpio en cada pallet."
+      },
+      {
+        "name": "Vikram Nair",
+        "company": "Director, Nair Glass Works",
+        "feedback": "Equipo receptivo, especificaciones de película a medida y calidad constante lote tras lote. Exactamente lo que necesitamos de un proveedor de embalaje."
+      }
+    ]
+  },
+  "companyVideo": {
+    "eyebrow": "Video de la empresa",
+    "heading": "Un vistazo por dentro",
+    "title": "Dentro de Mansi Plastic",
+    "playAria": "Reproducir video de la empresa",
+    "closeAria": "Cerrar video"
+  },
+  "enquiryForm": {
+    "eyebrow": "Ponte en contacto",
+    "heading": "Envíanos una consulta",
+    "subheading": "Cuéntanos qué necesitas y nuestro equipo se pondrá en contacto contigo en breve.",
+    "successMessage": "Gracias. Hemos registrado tu consulta, nuestro equipo se pondrá en contacto pronto.",
+    "fields": {
+      "name": "Nombre",
+      "company": "Empresa",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "product": "Producto",
+      "message": "Mensaje"
+    },
+    "placeholders": {
+      "name": "Tu nombre completo",
+      "company": "Nombre de tu empresa",
+      "email": "tu@empresa.com",
+      "phone": "+91 00000 00000",
+      "message": "Cuéntanos tu requerimiento"
+    },
+    "selectProduct": "Selecciona un producto",
+    "productOptions": [
+      "Película termorretráctil de LDPE",
+      "Película termorretráctil de LDPE impresa",
+      "Película termorretráctil para agrupación",
+      "Película tubular termorretráctil de LDPE",
+      "Película estirable de LLDPE",
+      "Película termorretráctil microperforada",
+      "Otro"
+    ],
+    "submit": "Enviar consulta",
+    "errors": {
+      "name": "Por favor, introduce tu nombre.",
+      "email": "Por favor, introduce tu correo electrónico.",
+      "emailInvalid": "Por favor, introduce una dirección de correo válida.",
+      "phone": "Por favor, introduce tu número de teléfono.",
+      "phoneInvalid": "Por favor, introduce un número de teléfono válido.",
+      "product": "Por favor, selecciona un producto.",
+      "message": "Por favor, añade un breve mensaje."
+    }
+  },
+  "footer": {
+    "description": "El esfuerzo de Mansi Plastic a lo largo de las décadas ha convertido a sus productos en de los más solicitados en el sector, incluyendo el termorretráctil de alta aplicación para cartón, resmas, botellas de vidrio y embalaje termorretráctil para agrupación.",
+    "quickLinks": "Enlaces rápidos",
+    "getInTouch": "Ponte en contacto",
+    "address": "Área Industrial, Meerut, Uttar Pradesh, India",
+    "rights": "Todos los derechos reservados."
+  }
+}
