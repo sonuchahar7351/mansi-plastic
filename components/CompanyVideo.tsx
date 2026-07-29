@@ -4,12 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Play, X } from "lucide-react";
 import { companyVideo } from "@/lib/data";
-import { useLanguage } from "@/context/LanguageContext";
 
 export default function CompanyVideo() {
-  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
-  const title = t("companyVideo.title");
 
   useEffect(() => {
     if (!open) return;
@@ -28,9 +25,9 @@ export default function CompanyVideo() {
     <section className="section-padding bg-section">
       <div className="container-page">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="eyebrow">{t("companyVideo.eyebrow")}</p>
+          <p className="eyebrow">Company Video</p>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-primary">
-            {t("companyVideo.heading")}
+            Take a Look Inside
           </h2>
         </div>
 
@@ -38,12 +35,12 @@ export default function CompanyVideo() {
           <button
             type="button"
             onClick={() => setOpen(true)}
-            aria-label={t("companyVideo.playAria")}
+            aria-label="Play company video"
             className="group relative block w-full aspect-video rounded-lg overflow-hidden shadow-card"
           >
             <Image
               src={companyVideo.thumbnail}
-              alt={title}
+              alt={companyVideo.title}
               fill
               sizes="(max-width: 1024px) 90vw, 900px"
               className="object-cover"
@@ -62,7 +59,7 @@ export default function CompanyVideo() {
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={title}
+          aria-label={companyVideo.title}
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 animate-fadeIn"
           onClick={() => setOpen(false)}
         >
@@ -73,14 +70,14 @@ export default function CompanyVideo() {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              aria-label={t("companyVideo.closeAria")}
+              aria-label="Close video"
               className="absolute -top-12 right-0 text-white hover:text-accent"
             >
               <X size={28} />
             </button>
             <iframe
               src={companyVideo.videoUrl}
-              title={title}
+              title={companyVideo.title}
               className="h-full w-full rounded-md"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

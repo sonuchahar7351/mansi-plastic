@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Award, Users, Handshake, Target } from "lucide-react";
-import { StatMeta } from "@/types";
+import { StatItem } from "@/types";
 
 const icons = {
   years: Award,
@@ -11,16 +11,7 @@ const icons = {
   targets: Target,
 };
 
-interface StatCounterProps extends StatMeta {
-  label: string;
-}
-
-export default function StatCounter({
-  icon,
-  value,
-  suffix,
-  label,
-}: StatCounterProps) {
+export default function StatCounter({ icon, value, suffix, label }: StatItem) {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef<HTMLDivElement>(null);

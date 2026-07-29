@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import Image from "next/image";
 import {
   Linkedin,
   Facebook,
@@ -11,7 +8,6 @@ import {
   MapPin,
 } from "lucide-react";
 import { footerLinks, contactDetails, socialLinks } from "@/lib/data";
-import { useLanguage } from "@/context/LanguageContext";
 
 const socialIcons = {
   LinkedIn: Linkedin,
@@ -20,26 +16,21 @@ const socialIcons = {
 };
 
 export default function Footer() {
-  const { t } = useLanguage();
-
   return (
     <footer className="bg-[#F1F2F4] border-t border-borderc">
-      <div className="container-page py-14 grid grid-cols-1 md:grid-cols-5 gap-6">
+      <div className="container-page py-14 grid grid-cols-1 md:grid-cols-5 gap-4">
         <div className="md:col-span-2">
-          <p className="text-xl font-bold text-primary">
-            <Image
-              src="/images/mplogopng.png"
-              alt="Mansi Plastic Logo"
-              width={60}
-              height={40}
-            />
-          </p>
+          <p className="text-xl font-bold text-primary">Mansi Plastic</p>
           <p className="mt-4 text-sm text-body/80 leading-relaxed max-w-sm">
-            {t("footer.description")}
+            Mansi Plastic&apos;s efforts over the decades have made its products
+            among the most sought after in the domain, including
+            high-application shrink bundling for paperboard, reams, glass
+            bottles, and collation shrink packaging.
           </p>
           <div className="mt-6 flex items-center gap-3">
             {socialLinks.map((social) => {
-              const Icon = socialIcons[social.label];
+              const Icon =
+                socialIcons[social.label as keyof typeof socialIcons];
               return (
                 <a
                   key={social.label}
@@ -57,9 +48,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold text-primary">
-            {t("footer.quickLinks")}
-          </p>
+          <p className="text-sm font-semibold text-primary">Quick Links</p>
           <ul className="mt-4 space-y-2.5">
             {footerLinks.map((link) => (
               <li key={link.href}>
@@ -67,7 +56,7 @@ export default function Footer() {
                   href={link.href}
                   className="text-sm text-body/80 hover:text-primary"
                 >
-                  {t(`nav.${link.key}`)}
+                  {link.label}
                 </Link>
               </li>
             ))}
@@ -75,9 +64,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold text-primary">
-            {t("footer.getInTouch")}
-          </p>
+          <p className="text-sm font-semibold text-primary">Get in Touch</p>
           <ul className="mt-4 space-y-3">
             <li className="flex items-start gap-2.5 text-sm text-body/80">
               <Mail size={16} className="mt-0.5 shrink-0 text-secondary" />
@@ -99,26 +86,28 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-2.5 text-sm text-body/80">
               <MapPin size={16} className="mt-0.5 shrink-0 text-secondary" />
-              <span>{t("footer.address")}</span>
+              <span>{contactDetails.address}</span>
             </li>
           </ul>
         </div>
 
-        <div className="relative w-full overflow-hidden rounded-lg">
+        <div>
           <iframe
             src="https://www.google.com/maps/embed?pb=YOUR_EMBED_LINK"
-            loading="lazy"
             width="100%"
             height="200"
+            style={{ border: 0 }}
+            loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-          />
+            className="rounded-lg"
+          ></iframe>
         </div>
       </div>
 
       <div className="border-t border-borderc">
         <div className="container-page py-5 text-center text-xs text-body/70">
-          © {new Date().getFullYear()} Mansi Plastic. {t("footer.rights")}
+          © {new Date().getFullYear()} Mansi Plastic. All rights reserved.
         </div>
       </div>
     </footer>

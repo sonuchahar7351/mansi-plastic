@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// @ts-ignore: side-effect CSS import handled by Next.js
 import "./globals.css";
-import { LanguageProvider } from "@/context/LanguageContext";
-import en from "@/locales/en.json";
+import { EnquiryModalProvider } from "@/context/EnquiryForm";
+import EnquiryModal from "@/shared/EnquiryModal";
+import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,12 +12,11 @@ const inter = Inter({
   display: "swap",
 });
 
-// Server-rendered metadata always uses the default language (English) for
-// SEO, since it's generated before the client can read the saved language
-// preference from localStorage. The visible UI still switches instantly.
 export const metadata: Metadata = {
-  title: en.meta.title,
-  description: en.meta.description,
+  title:
+    "Mansi Plastic | Manufacturer & Supplier of Plastic Packaging Products",
+  description:
+    "Mansi Plastic is a trusted manufacturer and supplier of a wide range of plastic packaging products, combining decades of experience with a commitment to quality, innovation, and reliability.",
 };
 
 export default function RootLayout({
@@ -26,7 +27,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased text-body bg-white">
-        <LanguageProvider>{children}</LanguageProvider>
+        <EnquiryModalProvider>
+          {children}
+          <EnquiryModal />
+
+          <AutoEnquiryTrigger delay={5000} />
+        </EnquiryModalProvider>
       </body>
     </html>
   );

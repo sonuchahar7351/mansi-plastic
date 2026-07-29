@@ -3,71 +3,61 @@
 import { useState } from "react";
 import Image from "next/image";
 import { aboutTabs } from "@/lib/data";
-import { useLanguage } from "@/context/LanguageContext";
-
-interface TabText {
-  label: string;
-  heading: string;
-  body: string;
-}
 
 export default function ProductsLaunched() {
-  const { t } = useLanguage();
-  const tabText: TabText[] = t("productsLaunched.tabs");
-
-  const [activeIndex, setActiveIndex] = useState(0);
-  const activeMeta = aboutTabs[activeIndex] ?? aboutTabs[0];
-  const activeText = tabText[activeIndex] ?? tabText[0];
+  const [activeId, setActiveId] = useState(aboutTabs[0].id);
+  const active = aboutTabs.find((tab) => tab.id === activeId) ?? aboutTabs[0];
 
   return (
     <section className="section-padding bg-section">
       <div className="container-page">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
-            {t("productsLaunched.heading")}
+            Manufacturer &amp; Supplier of Wide Range Plastics Packaging
+            Products
           </h2>
         </div>
 
         <div
           role="tablist"
-          aria-label={t("productsLaunched.tabsAriaLabel")}
+          aria-label="Product information tabs"
           className="mt-8 flex flex-wrap justify-center gap-3"
         >
-          {aboutTabs.map((tab, index) => (
+          {aboutTabs.map((tab) => (
             <button
               key={tab.id}
               role="tab"
               type="button"
-              aria-selected={index === activeIndex}
-              onClick={() => setActiveIndex(index)}
+              aria-selected={tab.id === activeId}
+              onClick={() => setActiveId(tab.id)}
               className={`rounded-md px-5 py-2.5 text-sm font-semibold transition-colors duration-200 ${
-                index === activeIndex
+                tab.id === activeId
                   ? "bg-accent text-white"
                   : "bg-white text-body border border-borderc hover:border-primary"
               }`}
             >
-              {tabText[index]?.label}
+              {tab.label}
             </button>
           ))}
         </div>
 
         <div
           role="tabpanel"
-          key={activeMeta.id}
+          key={active.id}
           className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center animate-fadeIn"
         >
           <div>
             <h3 className="text-2xl font-bold text-primary">
-              {activeText?.heading}
+              {active.heading}
             </h3>
             <p className="mt-4 text-base leading-relaxed text-body/90">
-              {activeText?.body}
+              {active.body}
             </p>
           </div>
           <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-card">
             <Image
-              src={activeMeta.image}
-              alt={activeText?.heading ?? ""}
+              src={active.image}
+              alt={active.heading}
               fill
               sizes="(max-width: 1024px) 90vw, 560px"
               className="object-cover"

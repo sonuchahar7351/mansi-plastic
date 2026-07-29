@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
-import { useLanguage } from "@/context/LanguageContext";
+import { productOptions } from "@/lib/data";
 
 interface FormState {
   name: string;
@@ -25,31 +25,25 @@ const initialState: FormState = {
 type Errors = Partial<Record<keyof FormState, string>>;
 
 export default function EnquiryForm() {
-  const { t } = useLanguage();
   const [form, setForm] = useState<FormState>(initialState);
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
 
-  const fields = t("enquiryForm.fields");
-  const placeholders = t("enquiryForm.placeholders");
-  const productOptions: string[] = t("enquiryForm.productOptions");
-  const errorMessages = t("enquiryForm.errors");
-
   const validate = (values: FormState): Errors => {
     const next: Errors = {};
-    if (!values.name.trim()) next.name = errorMessages.name;
+    if (!values.name.trim()) next.name = "Please enter your name.";
     if (!values.email.trim()) {
-      next.email = errorMessages.email;
+      next.email = "Please enter your email.";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      next.email = errorMessages.emailInvalid;
+      next.email = "Please enter a valid email address.";
     }
     if (!values.phone.trim()) {
-      next.phone = errorMessages.phone;
+      next.phone = "Please enter your phone number.";
     } else if (!/^[0-9+\-\s()]{7,}$/.test(values.phone)) {
-      next.phone = errorMessages.phoneInvalid;
+      next.phone = "Please enter a valid phone number.";
     }
-    if (!values.product) next.product = errorMessages.product;
-    if (!values.message.trim()) next.message = errorMessages.message;
+    if (!values.product) next.product = "Please select a product.";
+    if (!values.message.trim()) next.message = "Please add a short message.";
     return next;
   };
 
@@ -82,12 +76,12 @@ export default function EnquiryForm() {
     <section id="contact" className="section-padding bg-white">
       <div className="container-page">
         <div className="text-center max-w-2xl mx-auto">
-          <p className="eyebrow">{t("enquiryForm.eyebrow")}</p>
+          <p className="eyebrow">Get In Touch</p>
           <h2 className="mt-3 text-3xl md:text-4xl font-bold text-primary">
-            {t("enquiryForm.heading")}
+            Send Us an Enquiry
           </h2>
           <p className="mt-4 text-sm text-body/80">
-            {t("enquiryForm.subheading")}
+            Tell us what you need and our team will get back to you shortly.
           </p>
         </div>
 
@@ -98,7 +92,8 @@ export default function EnquiryForm() {
               className="mb-6 flex items-center gap-3 rounded-md border border-accent/40 bg-accent/10 px-4 py-3 text-sm text-primary"
             >
               <CheckCircle2 size={20} className="text-accent shrink-0" />
-              {t("enquiryForm.successMessage")}
+              Thank you. Your enquiry has been noted, our team will reach out
+              soon.
             </div>
           )}
 
@@ -109,7 +104,7 @@ export default function EnquiryForm() {
                   htmlFor="name"
                   className="block text-sm font-medium text-body mb-2"
                 >
-                  {fields.name}
+                  Name
                 </label>
                 <input
                   id="name"
@@ -117,7 +112,7 @@ export default function EnquiryForm() {
                   value={form.name}
                   onChange={handleChange("name")}
                   className={inputClass("name")}
-                  placeholder={placeholders.name}
+                  placeholder="Your full name"
                   aria-invalid={!!errors.name}
                   aria-describedby={errors.name ? "name-error" : undefined}
                 />
@@ -133,7 +128,7 @@ export default function EnquiryForm() {
                   htmlFor="company"
                   className="block text-sm font-medium text-body mb-2"
                 >
-                  {fields.company}
+                  Company
                 </label>
                 <input
                   id="company"
@@ -141,7 +136,7 @@ export default function EnquiryForm() {
                   value={form.company}
                   onChange={handleChange("company")}
                   className={inputClass("company")}
-                  placeholder={placeholders.company}
+                  placeholder="Your company name"
                 />
               </div>
 
@@ -150,7 +145,7 @@ export default function EnquiryForm() {
                   htmlFor="email"
                   className="block text-sm font-medium text-body mb-2"
                 >
-                  {fields.email}
+                  Email
                 </label>
                 <input
                   id="email"
@@ -158,7 +153,7 @@ export default function EnquiryForm() {
                   value={form.email}
                   onChange={handleChange("email")}
                   className={inputClass("email")}
-                  placeholder={placeholders.email}
+                  placeholder="you@company.com"
                   aria-invalid={!!errors.email}
                   aria-describedby={errors.email ? "email-error" : undefined}
                 />
@@ -174,7 +169,7 @@ export default function EnquiryForm() {
                   htmlFor="phone"
                   className="block text-sm font-medium text-body mb-2"
                 >
-                  {fields.phone}
+                  Phone
                 </label>
                 <input
                   id="phone"
@@ -182,7 +177,7 @@ export default function EnquiryForm() {
                   value={form.phone}
                   onChange={handleChange("phone")}
                   className={inputClass("phone")}
-                  placeholder={placeholders.phone}
+                  placeholder="+91 00000 00000"
                   aria-invalid={!!errors.phone}
                   aria-describedby={errors.phone ? "phone-error" : undefined}
                 />
@@ -198,7 +193,7 @@ export default function EnquiryForm() {
                   htmlFor="product"
                   className="block text-sm font-medium text-body mb-2"
                 >
-                  {fields.product}
+                  Product
                 </label>
                 <select
                   id="product"
@@ -210,7 +205,7 @@ export default function EnquiryForm() {
                     errors.product ? "product-error" : undefined
                   }
                 >
-                  <option value="">{t("enquiryForm.selectProduct")}</option>
+                  <option value="">Select a product</option>
                   {productOptions.map((option) => (
                     <option key={option} value={option}>
                       {option}
@@ -229,7 +224,7 @@ export default function EnquiryForm() {
                   htmlFor="message"
                   className="block text-sm font-medium text-body mb-2"
                 >
-                  {fields.message}
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -237,7 +232,7 @@ export default function EnquiryForm() {
                   onChange={handleChange("message")}
                   rows={5}
                   className={inputClass("message")}
-                  placeholder={placeholders.message}
+                  placeholder="Tell us about your requirement"
                   aria-invalid={!!errors.message}
                   aria-describedby={
                     errors.message ? "message-error" : undefined
@@ -255,7 +250,7 @@ export default function EnquiryForm() {
               type="submit"
               className="mt-8 inline-flex items-center justify-center rounded-md bg-primary px-8 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-secondary"
             >
-              {t("enquiryForm.submit")}
+              Submit Enquiry
             </button>
           </form>
         </div>

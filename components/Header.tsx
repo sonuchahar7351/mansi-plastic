@@ -2,16 +2,13 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
-import { useLanguage } from "@/context/LanguageContext";
-import LanguageDropdown from "./LanguageDropdown";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t } = useLanguage();
 
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 40);
@@ -23,6 +20,8 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
 
+  const pathname = usePathname();
+
   const isSolid = scrolled || mobileOpen;
 
   return (
@@ -33,40 +32,46 @@ export default function Header() {
     >
       <div className="container-page flex items-center justify-between h-20">
         <Link
-          href="#home"
+          href="/"
           className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
             isSolid ? "text-primary" : "text-white"
           }`}
         >
-          <Image
-            src="/images/mplogopng.png"
-            alt="Mansi Plastic Logo"
-            width={60}
-            height={40}
-          />
+          Mansi Plastic
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-sm font-medium transition-colors duration-300 hover:text-accent ${
-                isSolid ? "text-body" : "text-white"
-              }`}
-            >
-              {t(`nav.${link.key}`)}
-            </Link>
+            <div key={link.href} className="flex flex-col gap-1 group">
+              <Link
+                href={link.href}
+                className={`relative text-sm font-medium transition-colors duration-300 hover:text-accent ${
+                  isSolid ? "text-body" : "text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+              <span
+                className={`h-[2px] bg-accent transition-all duration-300 ${
+                  isSolid ? "bg-accent" : "bg-white"
+                } ${pathname === link.href ? "w-full" : "w-0 group-hover:w-full"}`}
+              />
+            </div>
           ))}
         </nav>
 
         <div className="hidden lg:block">
-          <LanguageDropdown variant={isSolid ? "onLight" : "onDark"} />
+          <Link
+            href="#contact"
+            className="inline-flex items-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-secondary"
+          >
+            Contact Us
+          </Link>
         </div>
 
         <button
           type="button"
-          aria-label={mobileOpen ? t("header.closeMenu") : t("header.openMenu")}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
           className={`lg:hidden p-2 rounded-md transition-colors duration-300 ${
@@ -87,12 +92,16 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="py-3 text-sm font-medium text-body border-b border-borderc last:border-b-0"
               >
-                {t(`nav.${link.key}`)}
+                {link.label}
               </Link>
             ))}
-            <div className="mt-3">
-              <LanguageDropdown variant="onLight" className="w-full [&>button]:w-full [&>button]:justify-between" />
-            </div>
+            <Link
+              href="#contact"
+              onClick={() => setMobileOpen(false)}
+              className="mt-3 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-secondary"
+            >
+              Contact Us
+            </Link>
           </div>
         </nav>
       )}

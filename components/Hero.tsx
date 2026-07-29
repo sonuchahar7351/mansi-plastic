@@ -5,23 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { heroSlides } from "@/lib/data";
-import { useLanguage } from "@/context/LanguageContext";
 
 const SLIDE_DURATION = 6000;
 
-interface HeroSlideText {
-  heading: string;
-  description: string;
-  cta: string;
-}
-
 export default function Hero() {
-  const { t } = useLanguage();
   const [current, setCurrent] = useState(0);
   const [key, setKey] = useState(0); // forces Ken Burns animation restart
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const slideText: HeroSlideText[] = t("hero.slides");
 
   const goTo = (index: number) => {
     const next = (index + heroSlides.length) % heroSlides.length;
@@ -48,11 +38,11 @@ export default function Hero() {
       id="home"
       className="relative h-screen min-h-[560px] w-full overflow-hidden"
       aria-roledescription="carousel"
-      aria-label={t("hero.ariaLabel")}
+      aria-label="Featured products"
     >
       {heroSlides.map((slide, index) => (
         <div
-          key={slide.image}
+          key={slide.heading}
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
             index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
@@ -82,16 +72,16 @@ export default function Hero() {
         <div className="container-page">
           <div key={current} className="max-w-2xl animate-fadeUp">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
-              {slideText[current]?.heading}
+              {heroSlides[current].heading}
             </h1>
             <p className="mt-5 text-base sm:text-lg text-white/90 max-w-xl">
-              {slideText[current]?.description}
+              {heroSlides[current].description}
             </p>
             <Link
               href={heroSlides[current].ctaHref}
               className="mt-8 inline-flex items-center rounded-md bg-accent px-7 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-dark"
             >
-              {slideText[current]?.cta}
+              {heroSlides[current].ctaLabel}
             </Link>
           </div>
         </div>
@@ -101,7 +91,7 @@ export default function Hero() {
         <button
           type="button"
           onClick={prev}
-          aria-label={t("hero.previousSlide")}
+          aria-label="Previous slide"
           className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
         >
           <ChevronLeft size={22} />
@@ -109,7 +99,7 @@ export default function Hero() {
         <button
           type="button"
           onClick={next}
-          aria-label={t("hero.nextSlide")}
+          aria-label="Next slide"
           className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
         >
           <ChevronRight size={22} />
@@ -119,10 +109,10 @@ export default function Hero() {
       <div className="absolute bottom-8 left-6 md:left-10 z-20 flex items-center gap-2">
         {heroSlides.map((slide, index) => (
           <button
-            key={slide.image}
+            key={slide.heading}
             type="button"
             onClick={() => goTo(index)}
-            aria-label={t("hero.goToSlide", { n: index + 1 })}
+            aria-label={`Go to slide ${index + 1}`}
             aria-current={index === current}
             className={`h-2.5 rounded-full transition-all duration-300 ${
               index === current ? "w-8 bg-accent" : "w-2.5 bg-white/60"
