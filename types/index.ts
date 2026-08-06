@@ -5,10 +5,10 @@ export interface NavLink {
 
 export interface HeroSlide {
   image: string;
-  heading: string;
-  description: string;
-  ctaLabel: string;
-  ctaHref: string;
+  heading?: string;
+  description?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 }
 
 export interface LaunchedProduct {
@@ -25,6 +25,10 @@ export interface ProductItem {
   href: string;
   banners?: string[];
   featuresBanner?: string;
+  AvailableIn?: string[];
+  CapiblityRange?: string[];
+  Spacification?: string[];
+  category?: string;
 }
 
 export interface StatItem {

@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { products } from "@/lib/data";
 import CustomSwiper from "../shared/customCarousel";
 
-export default function OurProducts() {
+export default function ProductList() {
   return (
     <section id="products" className="section-padding bg-section">
       <div className="container-page">
@@ -19,23 +19,9 @@ export default function OurProducts() {
             Our commitment to innovation ensures durability, efficiency, and
             sustainability in every product.
           </p>
-          <div className="hidden sm:block"></div>
         </div>
 
-        <CustomSwiper
-          slidesPerView={1}
-          spaceBetween={10}
-          customNavigation={true}
-          autoplay={true}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 15 },
-            1024: { slidesPerView: 3, spaceBetween: 20 },
-          }}
-          loop={true}
-          navBtnClassName="p-3 rounded-full cursor-pointer bg-primary text-white shadow hover:bg-primary/80 transition pointer-events-auto"
-          navWrapperClassName="hidden sm:flex absolute -top-20 right-4 transform  z-10 items-center gap-3 pointer-events-none"
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {products.map((product) => (
             <Link
               href={`/${product.id}`}
@@ -72,7 +58,7 @@ export default function OurProducts() {
               </div>
             </Link>
           ))}
-        </CustomSwiper>
+        </div>
       </div>
     </section>
   );

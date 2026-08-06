@@ -13,8 +13,7 @@ export default function ProductsLaunched() {
       <div className="container-page">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-primary">
-            Manufacturer &amp; Supplier of Wide Range Plastics Packaging
-            Products
+            Manufacturer &amp; Supplier of Water Storage Tank Products
           </h2>
         </div>
 

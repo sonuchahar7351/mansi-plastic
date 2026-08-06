@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Mansi Plastic",
+  title: "Our Products | Mansi Plastic",
   description:
-    "Get in touch with Mansi Plastic for all your water storage tank needs. We are here to help you with our wide range of high-quality products.",
+    "Explore Mansi Plastic's complete range of premium water storage tanks. Browse our product catalog to find high-quality, durable tank solutions for residential, commercial, and industrial needs.",
 };
 
 export default function RootLayout({
@@ -18,11 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Header isVisible={false} />
+      <Header />
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />
-
         <AutoEnquiryTrigger delay={5000} />
       </EnquiryModalProvider>
       <Footer />

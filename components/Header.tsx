@@ -6,7 +6,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
 import { usePathname } from "next/navigation";
 
-export default function Header() {
+export default function Header({ isVisible = true }: { isVisible?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 

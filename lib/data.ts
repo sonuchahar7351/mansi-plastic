@@ -11,34 +11,13 @@ import {
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Career", href: "/career" },
   { label: "Contact Us", href: "/contact-us" },
 ];
 
 export const heroSlides: HeroSlide[] = [
   {
-    image: "https://picsum.photos/seed/mansi-extrusion/1920/1080",
-    heading: "LDPE Flat Film",
-    description:
-      "A versatile and durable packaging solution, engineered for a wide range of industrial and commercial applications.",
-    ctaLabel: "Explore More",
-    ctaHref: "#products",
-  },
-  {
-    image: "https://picsum.photos/seed/mansi-shrinkwrap/1920/1080",
-    heading: "Shrink Wrap Film",
-    description:
-      "High-clarity collation and pallet shrink film built for strength, load stability, and consistent performance.",
-    ctaLabel: "Explore More",
-    ctaHref: "#products",
-  },
-  {
-    image: "https://picsum.photos/seed/mansi-productionline/1920/1080",
-    heading: "Precision Manufacturing",
-    description:
-      "Modern extrusion lines and rigorous quality control, delivering plastic packaging you can rely on every time.",
-    ctaLabel: "Explore More",
-    ctaHref: "#products",
+    image: "/images/mansiBanner.png",
   },
 ];
 
@@ -47,14 +26,14 @@ export const aboutTabs: AboutTab[] = [
     id: "products-launched",
     label: "Products Launched",
     heading: "Products Launched",
-    body: "Mansi Plastic has launched a diverse range of plastic packaging products to meet diverse industry demands. Each product is designed with precision to ensure optimal performance and durability. With a focus on innovation and reliability, our wide product range underscores our commitment to delivering versatile and efficient packaging solutions.",
+    body: "Mansi Plastic has launched a diverse range of water storage tank to meet diverse industry demands. Each product is designed with precision to ensure optimal performance and durability. With a focus on innovation and reliability, our wide product range underscores our commitment to delivering versatile and efficient water storage tank solutions.",
     image: "https://picsum.photos/seed/mansi-launch/900/700",
   },
   {
     id: "tailor-made",
     label: "Tailor Made Products",
     heading: "Tailor Made Products",
-    body: "Every business has different packaging needs. Our engineering team works closely with clients to develop tailor-made film gauges, widths, and formulations, so the finished product fits the application exactly rather than the other way around.",
+    body: "Every business has different water storage tank needs. Our engineering team works closely with clients to develop tailor-made film gauges, widths, and formulations, so the finished product fits the application exactly rather than the other way around.",
     image: "https://picsum.photos/seed/mansi-tailormade/900/700",
   },
   {
@@ -86,74 +65,61 @@ export const launchedProducts: LaunchedProduct[] = [
 
 export const products: ProductItem[] = [
   {
-    id: "ldpe-shrink-wrap-film",
-    image: "https://picsum.photos/seed/mansi-prod1/700/500",
-    title: "LDPE Shrink Wrap Film",
+    id: "vertical-water-storage-tanks",
+    image: "/images/verticalTank.png",
+    title: "Vertical Water Storage Tanks",
     description:
-      "A versatile, durable packaging film suited to a wide range of industrial applications.",
-    href: "#contact",
+      "These above-ground vessels designed for a wide range of commercial, agricultural, and residential uses.",
+    href: "/products/vertical-water-storage-tanks",
+    AvailableIn: ["Double Layer", "Triple Layer", "Four Layer"],
+    CapiblityRange: [
+      "300L",
+      "500L",
+      "750L",
+      "1000L",
+      "1500L",
+      "2000L",
+      "3000L",
+      "5000L",
+    ],
+    Spacification: ["UV Stabilized", "Food Grade", "Durable Construction"],
+    category: "Suitable for rooftop and overhead water storage.",
     banners: [
-      "https://picsum.photos/seed/mansi-prod1/700/500",
-      "https://picsum.photos/seed/mansi-prod1/700/500",
-      "https://picsum.photos/seed/mansi-prod1/700/500",
+      "/images/verticalTank.png",
+      "/images/verticalTank.png",
+      "/images/verticalTank.png",
     ],
     featuresBanner: "https://picsum.photos/seed/mansi-prod1/800/400",
   },
   {
-    id: "printed-shrink-film",
-    image: "https://picsum.photos/seed/mansi-prod2/700/500",
-    title: "Printed LDPE Shrink Film",
+    id: "loft-tanks",
+    image: "/images/loftTank.png",
+    title: "Loft Tanks",
     description:
-      "Custom-printed shrink film that combines strong branding with reliable protection.",
-    href: "#contact",
+      "Space-saving tanks designed for indoor and loft installations. Ideal for kitchens, utility areas, and compact spaces.",
+    href: "/products/loft-tanks",
+    CapiblityRange: ["200L", "300L", "400L", "500L", "750L", "1000L"],
+
     banners: [
-      "https://picsum.photos/seed/mansi-banner1/800/400",
-      "https://picsum.photos/seed/mansi-banner2/800/400",
-      "https://picsum.photos/seed/mansi-banner3/800/400",
+      "/images/loftTank.png",
+      "/images/loftTank.png",
+      "/images/loftTank.png",
     ],
     featuresBanner: "https://picsum.photos/seed/mansi-features/800/400",
   },
   {
-    id: "collation-shrink-film",
-    image: "https://picsum.photos/seed/mansi-prod3/700/500",
-    title: "Collation Shrink Film",
-    description:
-      "Purpose-built for bundling multi-packs securely on high-speed lines.",
-    href: "#contact",
+    id: "household-tanks",
+    image: "/images/houseHoldTank.png",
+    title: "Household Tanks",
+    description: "Compact water storage tanks for residential use.",
+    href: "/products/household-tanks",
+    CapiblityRange: ["100", "200L"],
     banners: [
-      "https://picsum.photos/seed/mansi-banner1/800/400",
-      "https://picsum.photos/seed/mansi-banner2/800/400",
-      "https://picsum.photos/seed/mansi-banner3/800/400",
+      "/images/houseHoldTank.png",
+      "/images/houseHoldTank.png",
+      "/images/houseHoldTank.png",
     ],
-    featuresBanner: "https://picsum.photos/seed/mansi-features/800/400",
-  },
-  {
-    id: "ldpe-tubular-shrinkable-film",
-    image: "https://picsum.photos/seed/mansi-prod4/700/500",
-    title: "LDPE Tubular Shrinkable Film",
-    description:
-      "Seamless tubular film designed for efficient pallet shrink applications.",
-    href: "#contact",
-    banners: [
-      "https://picsum.photos/seed/mansi-banner1/800/400",
-      "https://picsum.photos/seed/mansi-banner2/800/400",
-      "https://picsum.photos/seed/mansi-banner3/800/400",
-    ],
-    featuresBanner: "https://picsum.photos/seed/mansi-features/800/400",
-  },
-  {
-    id: "lldpe-stretch-wrap-film",
-    image: "https://picsum.photos/seed/mansi-prod5/700/500",
-    title: "LLDPE Stretch Wrap Film",
-    description:
-      "Manual and machine-grade stretch film for stable, secure loads.",
-    href: "#contact",
-    banners: [
-      "https://picsum.photos/seed/mansi-banner1/800/400",
-      "https://picsum.photos/seed/mansi-banner2/800/400",
-      "https://picsum.photos/seed/mansi-banner3/800/400",
-    ],
-    featuresBanner: "https://picsum.photos/seed/mansi-features/800/400",
+    featuresBanner: "/images/hoseholdbanner.png",
   },
 ];
 
@@ -170,21 +136,21 @@ export const testimonials: Testimonial[] = [
     name: "Rajesh Malhotra",
     company: "Procurement Head, Apex Pharma",
     feedback:
-      "Mansi Plastic has been a dependable packaging partner for years. Their film consistency and on-time delivery make planning easy on our end.",
+      "Mansi Plastic has been a dependable water storage tank partner for years. Their film consistency and on-time delivery make planning easy on our end.",
   },
   {
     image: "https://picsum.photos/seed/mansi-t2/200/200",
     name: "Sunita Rao",
     company: "Operations Manager, Bluewave Foods",
     feedback:
-      "We switched to their shrink wrap film for our production line and immediately saw fewer breakages and a cleaner finish on every pallet.",
+      "We switched to their water storage tank shrink wrap film for our production line and immediately saw fewer breakages and a cleaner finish on every pallet.",
   },
   {
     image: "https://picsum.photos/seed/mansi-t3/200/200",
     name: "Vikram Nair",
     company: "Director, Nair Glass Works",
     feedback:
-      "Responsive team, tailor-made film specs, and consistent quality batch after batch. Exactly what we need from a packaging supplier.",
+      "Responsive team, tailor-made water storage tank specs, and consistent quality batch after batch. Exactly what we need from a water storage tank supplier.",
   },
 ];
 
@@ -196,27 +162,26 @@ export const companyVideo = {
 };
 
 export const productOptions = [
-  "LDPE Shrink Wrap Film",
-  "Printed LDPE Shrink Film",
-  "Collation Shrink Film",
-  "LDPE Tubular Shrinkable Film",
-  "LLDPE Stretch Wrap Film",
-  "Micro Perforated Shrink Film",
-  "Other",
+  "Loft Tanks",
+  "Vertical Water Storage Tanks",
+  "Household Tanks",
 ];
 
 export const footerLinks = [
   { label: "About Us", href: "/about" },
   { label: "Products", href: "/products" },
   { label: "Careers", href: "/careers" },
-  { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact" },
+  { label: "Sitemap", href: "/sitemap" },
 ];
 
 export const contactDetails = {
   email: "info@mansiplastic.com",
-  phone: "+91 98490 32212",
-  address: "Industrial Area, Meerut, Uttar Pradesh, India",
+  phone: "+91 92465 48874",
+  officeAddress:
+    "H. No. 10-1-670/1/B, A.C. Guards, Near Rock Memorial High School, Khairatabad, Hyderabad – 500004",
+  ManufacturingUnit:
+    "Plot No. 130 & 131, IDA, Katedan, Rajendranagar Circle, Ranga Reddy District, Telangana – 500077",
 };
 
 export const socialLinks = [
@@ -226,8 +191,10 @@ export const socialLinks = [
 ];
 
 export const aboutSection = {
-  heading: "About Us",
-  body: "Mansi Plastic was founded with a clear purpose: to manufacture a wide range of plastic packaging products that businesses can depend on. Over the decades, our offering has grown to include LDPE shrink wrap film, printed shrink film, collation shrink film, LDPE tubular shrinkable film, LLDPE stretch wrap film in manual and machine grades, micro-perforated shrink film, pallet top covers, and liners and bags for the pharmaceutical industry. With decades of experience and a commitment to innovation, sustainability, and performance, we have established ourselves as a trusted packaging partner for businesses across diverse industries.",
+  heading: "About Mansi Plastic",
+  body: "Mansi Plastic has been manufacturing water storage tanks that combine durability, quality, and reliable performance. Our products are made using quality raw materials and modern manufacturing processes to ensure long service life and safe water storage. ",
+  subBody:
+    "We manufacture tanks suitable for residential, commercial, and industrial applications, with options available in double-layer, triple-layer, and four-layer construction.",
   image: "https://picsum.photos/seed/mansi-about/900/1000",
   highlights: [
     "Superior Quality",

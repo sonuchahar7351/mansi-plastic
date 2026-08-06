@@ -64,11 +64,11 @@ export default function Hero() {
               className="object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/20" />
         </div>
       ))}
 
-      <div className="relative z-20 flex h-full items-center">
+      {/* <div className="relative z-20 flex h-full items-center">
         <div className="container-page">
           <div key={current} className="max-w-2xl animate-fadeUp">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
@@ -85,41 +85,45 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="absolute bottom-8 right-6 md:right-10 z-20 flex items-center gap-3">
-        <button
-          type="button"
-          onClick={prev}
-          aria-label="Previous slide"
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
-        >
-          <ChevronLeft size={22} />
-        </button>
-        <button
-          type="button"
-          onClick={next}
-          aria-label="Next slide"
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
-        >
-          <ChevronRight size={22} />
-        </button>
-      </div>
+      {heroSlides.length > 1 && (
+        <>
+          <div className="absolute bottom-8 right-6 md:right-10 z-20 flex items-center gap-3">
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Previous slide"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
+            >
+              <ChevronLeft size={22} />
+            </button>
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Next slide"
+              className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/25"
+            >
+              <ChevronRight size={22} />
+            </button>
+          </div>
 
-      <div className="absolute bottom-8 left-6 md:left-10 z-20 flex items-center gap-2">
-        {heroSlides.map((slide, index) => (
-          <button
-            key={slide.heading}
-            type="button"
-            onClick={() => goTo(index)}
-            aria-label={`Go to slide ${index + 1}`}
-            aria-current={index === current}
-            className={`h-2.5 rounded-full transition-all duration-300 ${
-              index === current ? "w-8 bg-accent" : "w-2.5 bg-white/60"
-            }`}
-          />
-        ))}
-      </div>
+          <div className="absolute bottom-8 left-6 md:left-10 z-20 flex items-center gap-2">
+            {heroSlides.map((slide, index) => (
+              <button
+                key={slide.heading}
+                type="button"
+                onClick={() => goTo(index)}
+                aria-label={`Go to slide ${index + 1}`}
+                aria-current={index === current}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  index === current ? "w-8 bg-accent" : "w-2.5 bg-white/60"
+                }`}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }

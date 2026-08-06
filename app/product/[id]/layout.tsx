@@ -1,14 +1,12 @@
 import EnquiryModal from "@/shared/EnquiryModal";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import type { Metadata } from "next";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Mansi Plastic",
+  title: "Premium Water Storage Tanks | Mansi Plastic Products",
   description:
-    "Get in touch with Mansi Plastic for all your water storage tank needs. We are here to help you with our wide range of high-quality products.",
+    "Explore our high-quality water storage tanks, built for durability and long-term use. Mansi Plastic manufactures industrial-grade tanks that meet national safety standards, perfect for residential, commercial, and agricultural applications.",
 };
 
 export default function RootLayout({
@@ -18,14 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Header isVisible={false} />
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />
-
         <AutoEnquiryTrigger delay={5000} />
       </EnquiryModalProvider>
-      <Footer />
     </>
   );
 }

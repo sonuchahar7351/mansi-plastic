@@ -6,7 +6,7 @@ export const products: ProductDetail[] = [
     image: "https://picsum.photos/seed/mansi-prod1/700/500",
     title: "LDPE Shrink Wrap Film",
     description:
-      "A versatile, durable packaging film suited to a wide range of industrial applications.",
+      "A versatile, durable water storage tank film suited to a wide range of industrial applications.",
     href: "#contact",
     banners: [
       "https://picsum.photos/seed/mansi-prod1/700/500",

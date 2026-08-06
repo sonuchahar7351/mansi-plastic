@@ -13,10 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Mansi Plastic | Manufacturer & Supplier of Plastic Packaging Products",
+  title: "Mansi Plastic | Manufacturer & Supplier of water storage tanks",
   description:
-    "Mansi Plastic is a trusted manufacturer and supplier of a wide range of plastic packaging products, combining decades of experience with a commitment to quality, innovation, and reliability.",
+    "Mansi Plastic is a trusted manufacturer and supplier of a wide range of water storage tanks, combining decades of experience with a commitment to quality, innovation, and reliability.",
 };
 
 export default function RootLayout({
