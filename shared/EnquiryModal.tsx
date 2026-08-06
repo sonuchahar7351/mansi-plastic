@@ -4,11 +4,9 @@ import { useEnquiryModal } from "@/context/EnquiryForm";
 import { useState, FormEvent } from "react";
 
 const PRODUCTS = [
-  "Stretch Film",
-  "LDPE Rolls",
-  "HDPE Rolls",
-  "Packaging Tape",
-  "Other",
+  "Loft Tanks",
+  "Vertical Water Storage Tanks",
+  "Household Tanks",
 ];
 
 export default function EnquiryModal() {
@@ -22,6 +20,7 @@ export default function EnquiryModal() {
     product: productName ?? "",
     message: "",
   });
+
   const [submitting, setSubmitting] = useState(false);
 
   if (!isOpen) return null;
@@ -38,12 +37,26 @@ export default function EnquiryModal() {
     e.preventDefault();
     setSubmitting(true);
     try {
-      // Replace with your actual API endpoint.
-      await fetch("/api/enquiry", {
+      const formData = new FormData();
+
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("mobile", form.mobile);
+      formData.append("company", form.company);
+      formData.append("product", form.product);
+      formData.append("message", form.message);
+      formData.append("access_key", "YOUR_ACCESS_KEY");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: formData,
       });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Message sent!");
+      }
       closeModal();
     } catch (err) {
       console.error("Enquiry submit failed", err);

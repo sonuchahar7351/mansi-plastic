@@ -2,13 +2,12 @@
 
 import Image from "next/image";
 import CustomCarousel from "../shared/bannerCarousel";
-import { products } from "@/lib/data";
 import { ProductItem } from "@/types";
 import { useEnquiryModal } from "@/context/EnquiryForm";
 import Breadcrumb from "@/shared/Breadcrumb";
-import { notFound } from "next/navigation";
+import { products } from "@/lib/productsDetail";
 
-const ProductDetail = ({ productId }: { productId: string }) => {
+const BigProductDetail = ({ productId }: { productId: string }) => {
   const product: ProductItem | undefined = products.find(
     (p) => p.id === productId,
   );
@@ -16,12 +15,12 @@ const ProductDetail = ({ productId }: { productId: string }) => {
   const { openModal } = useEnquiryModal();
 
   if (!product) {
-    return notFound();
+    return <div>Product not found</div>;
   }
 
   return (
     <div>
-      <div className="relative w-full h-[600px] overflow-hidden">
+      <div className="relative w-full h-[400px] overflow-hidden">
         <div
           className={`absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10`}
         >
@@ -45,45 +44,10 @@ const ProductDetail = ({ productId }: { productId: string }) => {
           <div className="absolute inset-0 bg-black/50" />
         </div>
       </div>
-      <div className="container-page grid grid-cols-1 md:grid-cols-3 my-8 gap-4">
-        <div className="col-span-2 space-y-3">
+      <div className="container-page grid grid-cols-1 md:grid-cols-3 my-8">
+        <div className="col-span-2 space-y-4">
           <h2 className="text-2xl font-bold text-primary">{product.title}</h2>
           <p className="text-lg">{product.description}</p>
-          <div className="rounded-xl border py-4 px-6 shadow-sm">
-            <h2 className="text-2xl font-bold mb-4">Water Storage Tanks</h2>
-
-            <div className="mb-4">
-              <h3 className="font-semibold mb-2">Available Layers</h3>
-              <div className="flex flex-wrap gap-2">
-                {["Double Layer", "Triple Layer", "Four Layer"].map((item) => (
-                  <span
-                    key={item}
-                    className="px-3 py-1 rounded-full bg-gray-100 text-sm"
-                  >
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-4">
-              <h3 className="font-semibold mb-2">Capacity Range</h3>
-              <div className="flex flex-wrap gap-2">
-                {product?.CapiblityRange?.map((capacity) => (
-                  <span
-                    key={capacity}
-                    className="px-3 py-1 rounded-md border text-sm"
-                  >
-                    {capacity}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {product?.category && (
-              <p className="text-gray-600">{product?.category}</p>
-            )}
-          </div>
         </div>
         <div>
           <CustomCarousel
@@ -113,4 +77,4 @@ const ProductDetail = ({ productId }: { productId: string }) => {
   );
 };
 
-export default ProductDetail;
+export default BigProductDetail;

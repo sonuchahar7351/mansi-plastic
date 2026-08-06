@@ -5,9 +5,9 @@ import { aboutSection } from "@/lib/data";
 export default function About() {
   return (
     <section id="about" className="section-padding bg-white">
-      <div className="container-page grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container-page grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div className="relative order-2 lg:order-1">
-          <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-card">
+          <div className="relative aspect-[5/4] w-full mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-card ">
             <Image
               src={aboutSection.image}
               alt="Mansi Plastic manufacturing facility"
@@ -25,6 +25,10 @@ export default function About() {
           </h2>
           <p className="mt-5 text-base leading-relaxed text-body/90">
             {aboutSection.body}
+          </p>
+
+          <p className="mt-5 text-base leading-relaxed text-body/90">
+            {aboutSection.subBody}
           </p>
 
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -8,7 +8,7 @@ import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 export const metadata: Metadata = {
   title: "About Mansi Plastic",
   description:
-    "Mansi Plastic is a trusted manufacturer and supplier of a wide range of plastic packaging products, combining decades of experience with a commitment to quality, innovation, and reliability.",
+    "Mansi Plastic is a trusted manufacturer and supplier of water storage tank, combining decades of experience with a commitment to quality, innovation, and reliability.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Header />
+      <Header isVisible={false} />
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />

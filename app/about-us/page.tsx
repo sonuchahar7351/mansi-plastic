@@ -43,30 +43,23 @@ const page = () => {
           </div>
           <div className="col-span-2 space-y-3">
             <h2 className="text-primary font-bold text-2xl">
-              About Mansi Plastic
+              Trusted Water Tank Manufacturer
             </h2>
             <p className="text-lg text-gray-700">
-              Mansi Plastic is a leading manufacturer of high-quality plastic
-              products. With over two decades of experience in the industry, we
-              have established ourselves as a trusted partner for businesses
-              across various sectors.
+              Mansi Plastic has been manufacturing water storage tanks that
+              combine durability, quality, and reliable performance. Our
+              products are made using quality raw materials and modern
+              manufacturing processes to ensure long service life and safe water
+              storage.
+            </p>
+            <p className="text-lg text-gray-700">
+              We manufacture tanks suitable for residential, commercial, and
+              industrial applications, with options available in double-layer,
+              triple-layer, and four-layer construction.
+              <br />
             </p>
           </div>
         </div>
-        <p className="text-lg text-gray-700">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quisquam
-          voluptas nostrum rerum illo minima, sed temporibus aliquam nesciunt
-          delectus consequuntur hic,{" "}
-          <span className="text-red-500">expedita doloribus</span> quo quos id
-          minus cum. Et.
-          <br />
-          <br />
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quisquam
-          voluptas nostrum rerum illo minima, sed temporibus aliquam nesciunt
-          delectus consequuntur hic, expedita doloribus quo quos id minus cum.
-          Et.
-          <br />
-        </p>
       </div>
     </div>
   );
