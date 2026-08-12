@@ -22,7 +22,7 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
 
   const pathname = usePathname();
 
-  const isSolid = scrolled || mobileOpen;
+  const isSolid = scrolled || mobileOpen || isVisible;
 
   return (
     <header

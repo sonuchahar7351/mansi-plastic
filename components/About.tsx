@@ -29,6 +29,14 @@ export default function About() {
 
           <p className="mt-5 text-base leading-relaxed text-body/90">
             {aboutSection.subBody}
+
+            <p className="text-base text-gray-700">
+              As experienced water tank manufacturers in Telangana, Mansi
+              Plastic focuses on producing durable and reliable plastic water
+              storage tanks. Our tanks are designed to provide long-lasting
+              performance for a wide range of residential and commercial
+              requirements.
+            </p>
           </p>
 
           <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

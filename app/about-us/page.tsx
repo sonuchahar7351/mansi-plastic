@@ -46,17 +46,27 @@ const page = () => {
               Trusted Water Tank Manufacturer
             </h2>
             <p className="text-lg text-gray-700">
-              Mansi Plastic has been manufacturing water storage tanks that
-              combine durability, quality, and reliable performance. Our
-              products are made using quality raw materials and modern
-              manufacturing processes to ensure long service life and safe water
-              storage.
+              Mansi Plastic has been the best manufacturing water storage tanks
+              in Hyderabad that combine durability, quality, and reliable
+              performance. Our products are made using quality raw materials and
+              modern manufacturing processes to ensure long service life and
+              safe water storage.
             </p>
             <p className="text-lg text-gray-700">
               We manufacture tanks suitable for residential, commercial, and
               industrial applications, with options available in double-layer,
               triple-layer, and four-layer construction.
               <br />
+            </p>
+
+            <p className="text-lg text-gray-700">
+              Mansi Plastic is a trusted water tank manufacturer and supplier in
+              Hyderabad, offering high-quality plastic water storage tanks for
+              residential, commercial, and agricultural applications. We provide
+              durable double layer, triple layer, and four layer water tanks in
+              multiple capacities. Our product range also includes trusted
+              brands such as Aashirvad and Sunrise, helping customers find
+              reliable water storage solutions for their specific requirements.
             </p>
           </div>
         </div>

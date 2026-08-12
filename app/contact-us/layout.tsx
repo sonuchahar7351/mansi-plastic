@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Mansi Plastic",
+  title: "Contact Mansi Plastic | Water Tank Manufacturer in Hyderabad",
   description:
-    "Get in touch with Mansi Plastic for all your water storage tank needs. We are here to help you with our wide range of high-quality products.",
+    "Contact Mansi Plastic for water storage tank enquiries, product details, pricing, and quotes. Our team is ready to help with residential, commercial, and agricultural water storage solutions.",
 };
 
 export default function RootLayout({

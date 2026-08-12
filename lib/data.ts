@@ -96,7 +96,7 @@ export const products: ProductItem[] = [
     image: "/images/loftTank.png",
     title: "Loft Tanks",
     description:
-      "Space-saving tanks designed for indoor and loft installations. Ideal for kitchens, utility areas, and compact spaces.",
+      "Space-saving tanks designed for indoor and loft installations. Ideal for kitchens, utility areas, and compact spaces.  Mansi Plastic is a trusted loft tank manufacturer in Hyderabad, offering durable and space-efficient tanks in multiple apacities for residential and commercial water storage.",
     href: "/products/loft-tanks",
     CapiblityRange: ["200L", "300L", "400L", "500L", "750L", "1000L"],
 

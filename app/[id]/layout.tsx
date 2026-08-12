@@ -2,12 +2,40 @@ import EnquiryModal from "@/shared/EnquiryModal";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import type { Metadata } from "next";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
+import { ProductItem } from "@/types";
+import { products } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Mansi Plastic | Manufacturer & Supplier of water storage tank",
-  description:
-    "Mansi Plastic is a trusted manufacturer and supplier of water storage tank, combining decades of experience with a commitment to quality, innovation, and reliability.",
+type Props = {
+  params: Promise<{
+    id: string;
+  }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { id } = await params;
+
+  const product: ProductItem | undefined = products.find((p) => p.id === id);
+
+  if (!product) {
+    return {
+      title: "Premium Water Storage Tanks | Mansi Plastic",
+      description:
+        "Explore high-quality plastic water storage tanks from Mansi Plastic, designed for durable and reliable water storage.",
+    };
+  }
+
+  const layers = product.AvailableIn?.join(", ");
+  const capacities = product.CapiblityRange?.join(", ");
+
+  const title = `Plastic Water Storage Tanks | Mansi Plastic`;
+
+  const description = `Explore Mansi Plastic water storage tanks available in ${layers} in Hyderabad layers and capacities from ${capacities} . Durable plastic tanks designed for reliable residential, commercial and agricultural water storage.`;
+
+  return {
+    title,
+    description,
+  };
+}
 
 export default function RootLayout({
   children,

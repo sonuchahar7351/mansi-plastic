@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Mansi Plastic | Manufacturer & Supplier of water storage tanks",
+  title: "Water Tank Manufacturers in Hyderabad | Mansi Plastic",
   description:
-    "Mansi Plastic is a trusted manufacturer and supplier of a wide range of water storage tanks, combining decades of experience with a commitment to quality, innovation, and reliability.",
+    "Mansi Plastic is a trusted water tank manufacturer and supplier in Hyderabad, offering durable plastic water storage tanks for residential, commercial, and agricultural applications.",
 };
 
 export default function RootLayout({
