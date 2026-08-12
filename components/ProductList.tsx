@@ -19,6 +19,14 @@ export default function ProductList() {
             Our commitment to innovation ensures durability, efficiency, and
             sustainability in every product.
           </p>
+
+          <p className="text-lg text-gray-700">
+            Mansi Plastic is one of the trusted plastic water tank suppliers in
+            Telangana, providing durable water storage solutions for homes,
+            businesses, and agricultural applications. Our products are
+            available in multiple capacities and layer options to meet different
+            storage requirements.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
