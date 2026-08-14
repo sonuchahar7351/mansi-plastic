@@ -18,21 +18,21 @@ const categoryMetadata: Record<
   }
 > = {
   "double-layer": {
-    title: "Double Layer Water Tanks | Mansi Plastic",
+    title: "Double Layer Water Tanks | Sonu Plastic",
     description:
-      "Explore durable double layer water tanks from Mansi Plastic, designed for reliable water storage in residential, commercial, and agricultural applications.",
+      "Explore durable double layer water tanks from Sonu Plastic, designed for reliable water storage in residential, commercial, and agricultural applications.",
   },
 
   "triple-layer": {
-    title: "Triple Layer Water Tanks | Mansi Plastic",
+    title: "Triple Layer Water Tanks | Sonu Plastic",
     description:
-      "Explore high-quality triple layer water tanks from Mansi Plastic, built for durable and reliable water storage for homes, businesses, and agricultural applications.",
+      "Explore high-quality triple layer water tanks from Sonu Plastic, built for durable and reliable water storage for homes, businesses, and agricultural applications.",
   },
 
   "four-layer": {
-    title: "Four Layer Water Tanks | Mansi Plastic",
+    title: "Four Layer Water Tanks | Sonu Plastic",
     description:
-      "Explore premium four layer water tanks from Mansi Plastic, designed for strength, durability, and reliable long-term water storage.",
+      "Explore premium four layer water tanks from Sonu Plastic, designed for strength, durability, and reliable long-term water storage.",
   },
 };
 
@@ -43,9 +43,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!metadata) {
     return {
-      title: "Water Storage Tanks | Mansi Plastic",
+      title: "Water Storage Tanks | Sonu Plastic",
       description:
-        "Explore durable plastic water storage tanks from Mansi Plastic, available in multiple layers and capacities.",
+        "Explore durable plastic water storage tanks from Sonu Plastic, available in multiple layers and capacities.",
     };
   }
 

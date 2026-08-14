@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
   return (
     <section className="container-page mx-auto px-5 py-8">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold">Why Choose Mansi Plastic?</h2>
+        <h2 className="text-3xl font-bold">Why Choose Sonu Plastic?</h2>
         <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
           Reliable, durable, and designed to provide safe water storage for
           homes, businesses, and industries.

@@ -1,4 +1,4 @@
-# Mansi Plastic — Corporate Website (Frontend Only)
+# Sonu Plastic — Corporate Website (Frontend Only)
 
 A clean, corporate frontend built with Next.js (App Router), TypeScript, and
 Tailwind CSS. No backend or API integration is included — the enquiry form

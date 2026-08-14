@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export const metadata: Metadata = {
-  title: "Contact Sonu Plastic | Water Tank Manufacturer in Hyderabad",
+  title: "Careers at Sonu Plastic | Join Our Team in Hyderabad",
   description:
-    "Contact Sonu Plastic for water storage tank enquiries, product details, pricing, and quotes. Our team is ready to help with residential, commercial, and agricultural water storage solutions.",
+    "Explore career opportunities at Sonu Plastic, a leading water tank manufacturer in Hyderabad. Current openings in manufacturing, quality, sales & logistics. Competitive salary, health benefits & growth opportunities.",
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Header isVisible={false} />
+      <Header />
       <EnquiryModalProvider>
         {children}
         <EnquiryModal />

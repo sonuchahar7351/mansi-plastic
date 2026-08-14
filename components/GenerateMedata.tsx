@@ -12,9 +12,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!product) {
     return {
-      title: "Premium Water Storage Tanks | Mansi Plastic",
+      title: "Premium Water Storage Tanks | Sonu Plastic",
       description:
-        "Explore high-quality plastic water storage tanks from Mansi Plastic, designed for durable and reliable water storage.",
+        "Explore high-quality plastic water storage tanks from Sonu Plastic, designed for durable and reliable water storage.",
     };
   }
 
@@ -24,10 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "Water Tank",
   ].filter(Boolean);
 
-  const title = `${titleParts.join(" ")} | Mansi Plastic`;
+  const title = `${titleParts.join(" ")} | Sonu Plastic`;
 
   const description = [
-    `Explore the ${product.CapiblityRange ?? ""} ${product.AvailableIn ?? ""} plastic water tank from Mansi Plastic.`,
+    `Explore the ${product.CapiblityRange ?? ""} ${product.AvailableIn ?? ""} plastic water tank from Sonu Plastic.`,
     "Designed for durable and reliable water storage for residential, commercial and agricultural applications.",
   ]
     .join(" ")

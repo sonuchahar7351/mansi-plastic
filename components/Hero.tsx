@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { heroSlides } from "@/lib/data";
 
@@ -51,7 +50,7 @@ export default function Hero() {
           <div
             key={index === current ? key : undefined}
             className={`absolute inset-0 ${
-              index === current ? "animate-kenburns" : ""
+              index === current ? "animate-kenburn" : ""
             }`}
             style={{ animationDuration: `${SLIDE_DURATION + 1500}ms` }}
           >
@@ -67,25 +66,6 @@ export default function Hero() {
           <div className="absolute inset-0 bg-black/20" />
         </div>
       ))}
-
-      {/* <div className="relative z-20 flex h-full items-center">
-        <div className="container-page">
-          <div key={current} className="max-w-2xl animate-fadeUp">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight">
-              {heroSlides[current].heading}
-            </h1>
-            <p className="mt-5 text-base sm:text-lg text-white/90 max-w-xl">
-              {heroSlides[current].description}
-            </p>
-            <Link
-              href={heroSlides[current].ctaHref}
-              className="mt-8 inline-flex items-center rounded-md bg-accent px-7 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-accent-dark"
-            >
-              {heroSlides[current].ctaLabel}
-            </Link>
-          </div>
-        </div>
-      </div> */}
 
       {heroSlides.length > 1 && (
         <>

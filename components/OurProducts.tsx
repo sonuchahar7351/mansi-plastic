@@ -59,7 +59,7 @@ export default function OurProducts() {
                     {product.title}
                   </h3>
                   <p className="mt-2 text-sm text-body/80 leading-relaxed flex-1">
-                    {product.description}
+                    {product.description.slice(0, 100)}...
                   </p>
                   <Link
                     href={product.href}

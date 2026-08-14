@@ -44,7 +44,7 @@ export default function BrandsSection() {
           </h2>
 
           <p className="mt-4 text-gray-600 leading-7">
-            Mansi Plastic proudly manufactures multiple brands, each designed to
+            Sonu Plastic proudly manufactures multiple brands, each designed to
             meet different customer needs while maintaining exceptional quality,
             durability, and performance.
           </p>
@@ -100,13 +100,13 @@ export default function BrandsSection() {
         {/* Bottom Note */}
         <div className="mt-16 rounded-3xl bg-primary p-8 text-center text-white">
           <h3 className="text-2xl font-semibold">
-            Manufactured by Mansi Plastic
+            Manufactured by Sonu Plastic
           </h3>
 
           <p className="mt-3 max-w-3xl mx-auto text-white/90 leading-7">
             Every brand is manufactured with the same commitment to quality,
             durability, and performance. Whether you need an economical water
-            tank or a premium multi-layer solution, Mansi Plastic has a product
+            tank or a premium multi-layer solution, Sonu Plastic has a product
             designed to meet your requirements.
           </p>
         </div>

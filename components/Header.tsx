@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "@/lib/data";
 import { usePathname } from "next/navigation";
+import { useEnquiryModal } from "@/context/EnquiryForm";
+import Image from "next/image";
 
 export default function Header({ isVisible = true }: { isVisible?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
@@ -13,6 +15,8 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
   const handleScroll = useCallback(() => {
     setScrolled(window.scrollY > 40);
   }, []);
+
+  const { openModal } = useEnquiryModal();
 
   useEffect(() => {
     handleScroll();
@@ -31,13 +35,8 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
       }`}
     >
       <div className="container-page flex items-center justify-between h-20">
-        <Link
-          href="/"
-          className={`text-xl font-bold tracking-tight transition-colors duration-300 ${
-            isSolid ? "text-primary" : "text-white"
-          }`}
-        >
-          Mansi Plastic
+        <Link href="/" className={``}>
+          Sonu plastic
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
@@ -61,12 +60,12 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
         </nav>
 
         <div className="hidden lg:block">
-          <Link
-            href="#contact"
+          <button
             className="inline-flex items-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-secondary"
+            onClick={() => openModal()}
           >
-            Contact Us
-          </Link>
+            Enquire Now
+          </button>
         </div>
 
         <button
@@ -95,13 +94,12 @@ export default function Header({ isVisible = true }: { isVisible?: boolean }) {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
+            <button
+              onClick={() => openModal()}
               className="mt-3 inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-white hover:bg-secondary"
             >
-              Contact Us
-            </Link>
+              Enquire Now
+            </button>
           </div>
         </nav>
       )}

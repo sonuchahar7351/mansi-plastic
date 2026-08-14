@@ -14,6 +14,7 @@ interface EnquiryModalContextType {
   productName: string | null;
   openModal: (productName?: string) => void;
   closeModal: () => void;
+  submitted?: boolean;
 }
 
 const EnquiryModalContext = createContext<EnquiryModalContextType | undefined>(
@@ -23,6 +24,7 @@ const EnquiryModalContext = createContext<EnquiryModalContextType | undefined>(
 export function EnquiryModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [productName, setProductName] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
 
   // openModal optionally accepts a product name, so a "Enquire" button
   // on a specific product card can pre-select that product in the form.

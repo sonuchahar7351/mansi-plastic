@@ -21,7 +21,7 @@ export default function ProductList() {
           </p>
 
           <p className="text-lg text-gray-700">
-            Mansi Plastic is one of the trusted plastic water tank suppliers in
+            Sonu Plastic is one of the trusted plastic water tank suppliers in
             Telangana, providing durable water storage solutions for homes,
             businesses, and agricultural applications. Our products are
             available in multiple capacities and layer options to meet different

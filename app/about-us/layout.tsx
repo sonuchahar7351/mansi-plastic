@@ -6,9 +6,9 @@ import Footer from "@/components/Footer";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
 
 export const metadata: Metadata = {
-  title: "About Mansi Plastic | Trusted Water Tank Manufacturer",
+  title: "About Sonu Plastic | Trusted Water Tank Manufacturer",
   description:
-    "Learn about Mansi Plastic, a trusted manufacturer and supplier of durable plastic water storage tanks, committed to quality, innovation, and reliable water storage solutions.",
+    "Learn about Sonu Plastic, a trusted manufacturer and supplier of durable plastic water storage tanks, committed to quality, innovation, and reliable water storage solutions.",
 };
 
 export default function RootLayout({

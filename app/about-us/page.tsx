@@ -1,20 +1,16 @@
+import MissionVision from "@/components/MisssionVision";
 import Breadcrumb from "@/shared/Breadcrumb";
 import Image from "next/image";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <div className="relative w-full h-[400px] overflow-hidden">
-        <div
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 z-10`}
-        >
-          <div
-            className={`absolute inset-0 animate-kenburns`}
-            style={{ animationDuration: `1500ms` }}
-          >
+    <div className="">
+      <div className="relative w-full h-[550px] overflow-hidden">
+        <div className={`absolute inset-0 opacity-100 z-10`}>
+          <div className={`absolute inset-0`}>
             <Image
-              src={"https://picsum.photos/seed/mansi-prod1/800/400"}
+              src="/images/about-feature.png"
               alt=""
               fill
               priority={true}
@@ -33,7 +29,7 @@ const page = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="relative w-full h-[400px] overflow-hidden rounded-lg shadow-card">
             <Image
-              src={"https://picsum.photos/seed/mansi-prod2/400/400"}
+              src="/images/about.png"
               alt=""
               fill
               priority={true}
@@ -46,8 +42,8 @@ const page = () => {
               Trusted Water Tank Manufacturer
             </h2>
             <p className="text-lg text-gray-700">
-              Mansi Plastic has been the best manufacturing water storage tanks
-              in Hyderabad that combine durability, quality, and reliable
+              Sonu Plastic has been the bestsupplier of plastic toys in
+              Hyderabad that combine durability, quality, and reliable
               performance. Our products are made using quality raw materials and
               modern manufacturing processes to ensure long service life and
               safe water storage.
@@ -60,7 +56,7 @@ const page = () => {
             </p>
 
             <p className="text-lg text-gray-700">
-              Mansi Plastic is a trusted water tank manufacturer and supplier in
+              Sonu Plastic is a trusted water tank manufacturer and supplier in
               Hyderabad, offering high-quality plastic water storage tanks for
               residential, commercial, and agricultural applications. We provide
               durable double layer, triple layer, and four layer water tanks in
@@ -70,6 +66,11 @@ const page = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Mission / Vision / Values */}
+      <div className="bg-gray-50">
+        <MissionVision />
       </div>
     </div>
   );

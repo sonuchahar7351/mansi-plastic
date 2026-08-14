@@ -20,12 +20,11 @@ export default function Footer() {
     <footer className="bg-[#F1F2F4] border-t border-borderc">
       <div className="container-page py-14 grid grid-cols-1 md:grid-cols-5 gap-4">
         <div className="md:col-span-2">
-          <p className="text-xl font-bold text-primary">Mansi Plastic</p>
+          <div className="">Sonu plastic</div>
           <p className="mt-4 text-sm text-body/80 leading-relaxed max-w-sm">
-            Manufacturers of Sunrise, Duralex, Nandi Plus & Aashirwad water
-            storage tanks.
+            Manufacturers and suppliers of plastic toys.
             <br />
-            Reliable water storage. Durable quality. Trusted performance.
+            Reliable toy. Durable quality. Trusted performance.
           </p>
           <div className="mt-6 flex items-center gap-3">
             {socialLinks.map((social) => {
@@ -97,7 +96,7 @@ export default function Footer() {
 
         <div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1173731657673!2d78.45574107429056!3d17.40615398348421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97360ade3bcf%3A0xb12aeddc1c1d30fb!2sh%2C%2010-1-1110%2C%20near%20Flur%20mill%2C%20P%20%26%20T%20Officers%20Colony%2C%20AC%20Guards%2C%20Khairtabad%2C%20Hyderabad%2C%20Telangana%20500004!5e0!3m2!1sen!2sin!4v1785939325771!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14216.873012716693!2d77.83831629186062!3d27.02326852529875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39738b52a4a871e9%3A0x503bf3ee28f2a722!2sKagarol%2C%20Uttar%20Pradesh%20283119!5e0!3m2!1sen!2sin!4v1786720241781!5m2!1sen!2sin"
             width="100%"
             height="200"
             style={{ border: 0 }}
@@ -111,7 +110,7 @@ export default function Footer() {
 
       <div className="border-t border-borderc">
         <div className="container-page py-5 text-center text-xs text-body/70">
-          © {new Date().getFullYear()} Mansi Plastic. All rights reserved.
+          © {new Date().getFullYear()} Sonu Plastic. All rights reserved.
         </div>
       </div>
     </footer>

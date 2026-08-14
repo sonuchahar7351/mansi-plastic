@@ -10,7 +10,7 @@ export default function About() {
           <div className="relative aspect-[5/4] w-full mx-auto lg:mx-0 rounded-lg overflow-hidden shadow-card ">
             <Image
               src={aboutSection.image}
-              alt="Mansi Plastic manufacturing facility"
+              alt="Sonu Plastic manufacturing facility"
               fill
               sizes="(max-width: 1024px) 90vw, 480px"
               className="object-cover"

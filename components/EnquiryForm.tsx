@@ -3,6 +3,8 @@
 import { FormEvent, useState } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { productOptions } from "@/lib/data";
+import { useRouter } from "next/navigation";
+import emailjs from "@emailjs/browser";
 
 interface FormState {
   name: string;
@@ -29,6 +31,8 @@ export default function EnquiryForm() {
   const [errors, setErrors] = useState<Errors>({});
   const [submitted, setSubmitted] = useState(false);
 
+  const router = useRouter();
+
   const validate = (values: FormState): Errors => {
     const next: Errors = {};
     if (!values.name.trim()) next.name = "Please enter your name.";
@@ -50,20 +54,41 @@ export default function EnquiryForm() {
   const handleChange =
     (field: keyof FormState) =>
     (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+      e: React.ChangeEvent<
+        HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+      >,
     ) => {
       setForm((prev) => ({ ...prev, [field]: e.target.value }));
     };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const nextErrors = validate(form);
     setErrors(nextErrors);
-    if (Object.keys(nextErrors).length === 0) {
-      // Frontend only: no API call wired up. Hook this up to your backend
-      // or an email/form service (e.g. an API route) when ready.
-      setSubmitted(true);
+    if (Object.keys(nextErrors).length > 0) return;
+    setSubmitted(true);
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          name: form.name,
+          company: form.company || "-",
+          email: form.email,
+          phone: form.phone,
+          product: form.product,
+          message: form.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      );
+
       setForm(initialState);
+      router.push("/thank-you");
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      setSubmitted(false);
+    } finally {
+      setSubmitted(false);
     }
   };
 

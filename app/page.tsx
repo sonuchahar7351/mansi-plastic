@@ -1,8 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import ProductsLaunched from "@/components/ProductsLaunched";
-import LaunchedProducts from "@/components/LaunchedProducts";
 import Stats from "@/components/Stats";
 import OurProducts from "@/components/OurProducts";
 import Testimonials from "@/components/Testimonials";
@@ -22,9 +20,9 @@ export default function Home() {
         <CompanyIntro />
         <About />
         <WhyChooseUs />
+        <OurProducts />
         <BrandsSection />
         <Stats />
-        <OurProducts />
         <Testimonials />
         <CompanyVideo />
         <EnquiryForm />

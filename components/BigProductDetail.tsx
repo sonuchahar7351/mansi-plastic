@@ -5,7 +5,7 @@ import CustomCarousel from "../shared/bannerCarousel";
 import { ProductItem } from "@/types";
 import { useEnquiryModal } from "@/context/EnquiryForm";
 import Breadcrumb from "@/shared/Breadcrumb";
-import { products } from "@/lib/productsDetail";
+import { products } from "@/lib/data";
 
 const BigProductDetail = ({ productId }: { productId: string }) => {
   const product: ProductItem | undefined = products.find(

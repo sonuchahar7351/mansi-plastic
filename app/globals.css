@@ -177,3 +177,15 @@ select:focus-visible {
     opacity: 1;
   }
 }
+
+@keyframes kenburn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.06);
+  }
+}
+.animate-kenburn {
+  animation: kenburn 5s ease-out forwards;
+}

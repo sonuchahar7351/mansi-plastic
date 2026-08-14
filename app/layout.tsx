@@ -1,10 +1,36 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-// @ts-ignore: side-effect CSS import handled by Next.js
 import "./globals.css";
 import { EnquiryModalProvider } from "@/context/EnquiryForm";
 import EnquiryModal from "@/shared/EnquiryModal";
 import AutoEnquiryTrigger from "@/shared/AutoenquiryTrigger";
+
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+  weight: ["400", "500", "700"],
+});
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,9 +39,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Water Tank Manufacturers in Hyderabad | Mansi Plastic",
+  title: "Water Tank Manufacturers in Hyderabad | Sonu Plastic",
   description:
-    "Mansi Plastic is a trusted water tank manufacturer and supplier in Hyderabad, offering durable plastic water storage tanks for residential, commercial, and agricultural applications.",
+    "Sonu Plastic is a trusted water tank manufacturer and supplier in Hyderabad, offering durable plastic water storage tanks for residential, commercial, and agricultural applications.",
 };
 
 export default function RootLayout({
@@ -24,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="font-sans antialiased text-body bg-white">
+    <html lang="en" className={poppins.variable}>
+      <body className={`${poppins.className} antialiased text-body bg-white`}>
         <EnquiryModalProvider>
           {children}
           <EnquiryModal />

@@ -29,7 +29,7 @@ export default function CompanyIntro() {
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Mansi Plastic is a trusted manufacturer of premium plastic water
+              Sonu Plastic is a trusted manufacturer of premium plastic water
               storage tanks in Hyderabad, Telangana & Andhra Pradesh. Our tanks
               are durable, hygienic, UV stabilized, and built for homes,
               apartments, commercial buildings, and industrial applications.
@@ -83,7 +83,7 @@ export default function CompanyIntro() {
             <div className="overflow-hidden rounded-3xl bg-white p-0 shadow-2xl">
               <Image
                 src="/images/mansiPort.png"
-                alt="Mansi Plastic Water Tank"
+                alt="Sonu Plastic Water Tank"
                 width={700}
                 height={700}
                 className="mx-auto object-contain transition duration-500 hover:scale-105"
